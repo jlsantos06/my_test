@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.json",
+    "include": ["src/components/**/*"],
+    "exclude": ["src/components/**/model.ts"],
+    "compilerOptions": {
+      "sourceMap": false, // Reduces file size for production
+      "removeComments": true, // Strips comments for optimization
+      "declaration": false // Avoids generating `.d.ts` files in production
+    }
+  }
+  

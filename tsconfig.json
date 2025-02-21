@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "strict": true,
+    "typeRoots": ["./node_modules/@types"],
+    "paths": {
+      "@web-types/*": ["@types/*"],
+      "@common/*": ["src/components/common/*"]
+    }
+  },
+  "include": ["src"]
+}

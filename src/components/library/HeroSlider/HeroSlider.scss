@@ -1,0 +1,198 @@
+/** Home - Hero Slider **/
+
+:root {
+  --homepage-hero-button-width: 250px;
+}
+	
+.uhd-homepage-hero-slider {
+    max-height: 500px;
+	opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+}
+	
+.uhd-homepage-hero-slider.slick-initialized {
+    visibility: visible;
+    opacity: 1;    
+}
+
+.uhd-homepage-hero-slider .uhd-hero-slider-item {
+    position: relative !important;
+    display: block !important;
+}
+	
+.uhd-homepage-hero-slider img.uhd-hero-slider-item-bg {
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+	object-position: right center;
+}
+
+.uhd-homepage-hero-slider .uhd-hero-slider-item-overlay {
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+    opacity: .90;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	max-height: 500px;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-item-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 80px 80px 120px 80px;
+}
+
+	
+.uhd-homepage-hero-slider h1.uhd-hero-slider-item-title {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+}
+
+.uhd-homepage-hero-slider .uhd-hero-slider-item-subtitle {
+    font-style: italic;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-button-group {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	align-items: center;
+}
+	
+.uhd-homepage-hero-slider a.uhd-hero-slider-item-cta {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+	width: 250px;
+}
+	
+.uhd-homepage-hero-slider a.uhd-hero-slider-item-cta:hover {
+	opacity: 0.7;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-item:not(.uhd-landing-slide) a.uhd-hero-slider-item-cta {
+    margin-top: 20px;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-item.uhd-landing-slide .uhd-hero-slider-audience-btn {
+	margin-left: 30px;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-audience-btn {
+    padding: 10px 20px;
+    color: white;
+	background-color: var(--theme-primary-color);
+    text-decoration: none;
+    width: 250px;
+    text-align: left;
+	border-radius: 30px;
+	border: 2px solid var(--theme-primary-color);
+	text-transform: capitalize;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-audience-btn:hover {
+	background-color: var(--white);
+	color: var(--theme-primary-color);
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-audience-btn .uhd-hero-slider-audience-icon {
+    float: right;
+    margin-top: 3px;
+	transition: transform 0.3s ease;
+}
+
+.uhd-homepage-hero-slider .uhd-hero-slider-button-group .uhd-hero-slider-audience-btn.show .uhd-hero-slider-audience-icon {
+	transform: rotate(180deg);
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-audience-dropdown {
+	width: 250px;
+}
+	
+.uhd-homepage-hero-slider .uhd-hero-slider-audience-dropdown .dropdown-menu.show {
+	width: 250px;
+	padding: 0px;
+}
+	
+.uhd-homepage-hero-slider ul.slick-dots {
+    top: -80px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.uhd-homepage-hero-slider ul.slick-dots li button:before {
+	color: white;
+}
+	
+.uhd-homepage-hero-slider ul.slick-dots li.slick-active button:before {
+	color: transparent;
+	opacity: 1;
+}
+	
+.uhd-homepage-hero-slider .slick-dots li button {
+	background: white;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+	
+.uhd-homepage-hero-slider .slick-dots li.slick-active button {
+	background: transparent;
+}
+
+@media (max-width: 768px) {
+	
+   .uhd-homepage-hero-slider img.uhd-hero-slider-item-bg {
+		object-position: center;
+   }
+	
+  .uhd-homepage-hero-slider .uhd-hero-slider-item-content {
+    max-width: 100%;
+	align-items: center;
+	text-align: center;
+  }
+	
+
+  .uhd-homepage-hero-slider .uhd-hero-slider-item .uhd-hero-slider-item-content .uhd-hero-slider-item-title {
+	 font-size: 2em;
+  }
+	
+  .uhd-homepage-hero-slider .uhd-hero-slider-item .uhd-hero-slider-item-content .uhd-hero-slider-item-subtitle {
+	 font-size: 1.25em;
+  }
+
+  .uhd-homepage-hero-slider .uhd-hero-slider-item-overlay {
+	  background: rgba(0,0,0,0.6);
+  }
+	
+  .uhd-homepage-hero-slider .uhd-hero-slider-button-group {
+	  flex-direction: column;
+	  align-items: flex-start;
+	  justify-content: center;
+  }
+	
+  .uhd-homepage-hero-slider .uhd-hero-slider-item.uhd-landing-slide .uhd-hero-slider-audience-btn {
+	  margin-top: 20px;
+	  margin-left: 0px;
+  }
+	
+}

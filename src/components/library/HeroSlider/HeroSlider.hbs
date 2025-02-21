@@ -1,0 +1,45 @@
+<div class="uhd-homepage-hero-slider">
+  <!-- Default Slide -->
+  <div class="uhd-hero-slider-item uhd-landing-slide">
+    <img src="{{ image }}" data-lazy="{{ image }}" class="uhd-hero-slider-item-bg" alt="{{ altText }}" />
+    <div class="uhd-hero-slider-item-overlay"></div>
+    <div class="uhd-hero-slider-item-content">
+      <h1 class="uhd-hero-slider-item-title">{{ title }}</h1>
+      {{#if subtitle}}
+        <h2 class="uhd-hero-slider-item-subtitle">{{ subtitle }}</h2>
+      {{/if}}
+      <div class="uhd-hero-slider-button-group">
+        {{#if buttonText}}
+          <a class="uhd-hero-slider-item-cta" href="{{ buttonUrl }}">{{ buttonText }}</a>
+        {{/if}}
+        <div class="dropdown uhd-hero-slider-audience-dropdown">
+          <button class="uhd-hero-slider-audience-btn dropdown-toggle" type="button" id="audienceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            I am a <i class="fa-solid fa-chevron-down uhd-hero-slider-audience-icon"></i>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="audienceDropdown">
+            {{#each audienceDropdown}}
+              <li><a class="dropdown-item" href="{{ url }}">{{ label }}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Slides -->
+  {{#each slides}}
+  <div class="uhd-hero-slider-item">
+    <img src="{{ image }}" data-lazy="{{ image }}" class="uhd-hero-slider-item-bg" alt="{{ altText }}" />
+    <div class="uhd-hero-slider-item-overlay"></div>
+    <div class="uhd-hero-slider-item-content">
+      <h1 class="uhd-hero-slider-item-title">{{ title }}</h1>
+      {{#if subtitle}}
+        <h2 class="uhd-hero-slider-item-subtitle">{{ subtitle }}</h2>
+      {{/if}}
+      {{#if buttonText}}
+        <a class="uhd-hero-slider-item-cta" href="{{ buttonUrl }}">{{ buttonText }}</a>
+      {{/if}}
+    </div>
+  </div>
+  {{/each}}
+</div>
